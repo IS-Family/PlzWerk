@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace PlzWerk.Controllers
 {
@@ -13,9 +14,8 @@ namespace PlzWerk.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Pricing()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
@@ -25,6 +25,35 @@ namespace PlzWerk.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String userName = form["User Name"].ToString();
+            String password = form["Password"].ToString();
+
+            if (string.Equals(userName, "Missouri") && (string.Equals(password, "ShowMe")))
+            {
+                FormsAuthentication.SetAuthCookie(userName, rememberMe);
+
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
