@@ -18,6 +18,23 @@
            
         </div>
         <div class="col-lg-4">
+
+
+            @using (Html.BeginForm())
+            {
+                <table class="signin_tbl">
+                    <tr>
+                        <td class="signin_txt"><h5>Email</h5></td>
+                        <td>@Html.TextBox("Name", new { style = " height:70px; " })  </td>
+                    </tr>
+                    <tr>
+                        <td class="signin_txt">Password</td>
+                        <td class="signin_tb">@Html.TextBox("password") </td>
+                    </tr>
+                </table>
+            }
+
+
             <h2>Log in</h2>
             @using (Html.BeginForm("Login", "Home", FormMethod.Post))
             {

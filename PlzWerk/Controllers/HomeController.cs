@@ -37,8 +37,10 @@ namespace PlzWerk.Controllers
             return View();
         }
 
-        public ActionResult ClientPortal()
+        public ActionResult ClientPortal(string FName, string LName)
         {
+            ViewBag.FirstName = FName;
+            ViewBag.LastName = LName;
             return View();
         }
 
@@ -53,7 +55,7 @@ namespace PlzWerk.Controllers
             String userName = form["User Name"].ToString();
             String password = form["Password"].ToString();
 
-            if (string.Equals(userName, "Client") && (string.Equals(password, "ShowMe")))
+            if (string.Equals(userName, "Client1") && (string.Equals(password, "ShowMe")))
             {
                 FormsAuthentication.SetAuthCookie(userName, rememberMe);
 
@@ -67,10 +69,30 @@ namespace PlzWerk.Controllers
                 return RedirectToAction("ManagementPortal", "Home");
 
             }
+            else if (string.Equals(userName, "Client2") && (string.Equals(password, "ShowMe")))
+            {
+                FormsAuthentication.SetAuthCookie(userName, rememberMe);
+
+                return RedirectToAction("ManagementPortal", "Home");
+
+            }
             else
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult Register(FormCollection form, bool rememberMe = false)
+        {
+            String FirstName = form["First Name"].ToString();
+            String LastName = form["Last Name"].ToString();
+
+            
+                FormsAuthentication.SetAuthCookie(FirstName, rememberMe);
+
+                return RedirectToAction("ClientPortal", "Home", new { FName = FirstName, LName = LastName });
+            
         }
     }
 }

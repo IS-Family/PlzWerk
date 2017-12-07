@@ -4,22 +4,32 @@
 }
 
 <h2>Register</h2>
-
+<!--
 <br />
 <br />
 
 <form>
+    <div class="form-group">
+        <label for="exampleInputPassword1">User Name</label>
+        <input type="text" class="form-control" placeholder="User Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" placeholder="Password">
+    </div>
+    <br />
     <div class="form-group">
         <label for="exampleInputPassword1">First Name</label>
         <input type="text" class="form-control" placeholder="First Name">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Last Name</label>
+
         <input type="text" class="form-control" placeholder="Last Name">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Email</label>
-        <input type="text" class="form-control" placeholder="Email">
+        <input type="email" class="form-control" placeholder="Email">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Phone</label>
@@ -59,6 +69,80 @@
     </div>
     <br />
     <br />
-
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
+    -->
+
+
+
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+            {
+    <table>
+        <tr>
+            <td><label for="User Name">User Name</label></td>
+            <td>@Html.TextBox("User Name", null,  new { style = " margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+        <tr>
+            <td><label for="User Name">Password</label></td>
+            <td>@Html.Password("Password Name", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+        <tr>
+            <td><label for="User Name">First Name</label></td>
+            <td>@Html.TextBox("First Name", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">Last Name</label></td>
+            <td>@Html.TextBox("Last Name", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">Email</label></td>
+            <td>@Html.TextBox("Email", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">Phone</label></td>
+            <td>@Html.TextBox("Phone", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">Street Address</label></td>
+            <td>@Html.TextBox("Street Address", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">City</label></td>
+            <td>@Html.TextBox("City", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">State</label></td>
+            <td>@Html.TextBox("State", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+
+        <tr>
+            <td><label for="User Name">Zip</label></td>
+            <td>@Html.TextBox("Zip", null, new { style = "margin-bottom: 10px; margin-left: 50px; " })</td>
+        </tr>
+    </table>
+    <br />
+    <div class="form-check">
+        <p><label for="exampleInputPassword1">Please select your preferred method of contact</label></p>
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Email&nbsp&nbsp&nbsp
+        </label>
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Phone&nbsp&nbsp&nbsp
+        </label>
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Mail
+        </label>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Register</button>
+}
