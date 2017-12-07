@@ -37,6 +37,16 @@ namespace PlzWerk.Controllers
             return View();
         }
 
+        public ActionResult ClientPortal()
+        {
+            return View();
+        }
+
+        public ActionResult ManagementPortal()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
