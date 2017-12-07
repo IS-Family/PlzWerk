@@ -53,11 +53,18 @@ namespace PlzWerk.Controllers
             String userName = form["User Name"].ToString();
             String password = form["Password"].ToString();
 
-            if (string.Equals(userName, "Missouri") && (string.Equals(password, "ShowMe")))
+            if (string.Equals(userName, "Client") && (string.Equals(password, "ShowMe")))
             {
                 FormsAuthentication.SetAuthCookie(userName, rememberMe);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ClientPortal", "Home");
+
+            }
+            else if (string.Equals(userName, "Employee") && (string.Equals(password, "ShowMe")))
+            {
+                FormsAuthentication.SetAuthCookie(userName, rememberMe);
+
+                return RedirectToAction("ManagementPortal", "Home");
 
             }
             else
