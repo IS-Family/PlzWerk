@@ -88,11 +88,11 @@ namespace PlzWerk.Controllers
             String FirstName = form["First Name"].ToString();
             String LastName = form["Last Name"].ToString();
 
-            
-                FormsAuthentication.SetAuthCookie(FirstName, rememberMe);
 
-                return RedirectToAction("ClientPortal", "Home", new { FName = FirstName, LName = LastName });
-            
+            FormsAuthentication.SetAuthCookie(FirstName, rememberMe);
+
+            return RedirectToAction("Pricing", "Home", new { FName = FirstName, LName = LastName });
+
         }
     }
 }
