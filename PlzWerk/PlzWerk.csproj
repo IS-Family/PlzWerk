@@ -191,6 +191,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\ClientPortal.cshtml" />
     <Content Include="Views\Home\ManagementPortal.cshtml" />
+    <Content Include="Views\Home\NewClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

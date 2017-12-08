@@ -49,6 +49,12 @@ namespace PlzWerk.Controllers
             return View();
         }
 
+
+        public ActionResult NewClient()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
