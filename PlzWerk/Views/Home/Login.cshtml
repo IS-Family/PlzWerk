@@ -10,40 +10,32 @@
 </head>
 <body>
     <br />
-    <br />
-    <br />
 
     <div class="row">
         <div class="col-lg-4">
-           
+
         </div>
         <div class="col-lg-4">
-
-
-            @using (Html.BeginForm())
+            <div class="container">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
             {
-                <table class="signin_tbl">
-                    <tr>
-                        <td class="signin_txt"><h5>Email</h5></td>
-                        <td>@Html.TextBox("Name", new { style = " height:70px; " })  </td>
-                    </tr>
-                    <tr>
-                        <td class="signin_txt">Password</td>
-                        <td class="signin_tb">@Html.TextBox("password") </td>
-                    </tr>
-                </table>
-            }
-
-
-            <h2>Log in</h2>
-            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-            {
-                <label for="inputEmail">User Name</label>
-                @Html.TextBox("User Name")<br /><br />
-                <label for="inputPassword">Password</label>
-                @Html.Password("Password")<br /><br />
-                <button type="submit" class="btn btn-primary">Login</button>
-            }
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="inputEmail">User Name</label>
+                            </td>
+                            <td>@Html.TextBox("User Name", null, new { style = "margin-bottom: 5px; margin-left: 20px; " })</td>
+                        </tr>
+                        <br />
+                        <br />
+                        <tr>
+                            <td><label for="inputPassword">Password</label></td>
+                            <td>@Html.Password("Password", null, new { style = "margin-bottom: 5px; margin-left: 20px; " })</td>
+                        </tr>
+                    </table><br />
+                    <button type="submit" class="btn btn-primary">Login</button>
+                }
+            </div>
         </div>
         <div class="col-lg-4"></div>
 

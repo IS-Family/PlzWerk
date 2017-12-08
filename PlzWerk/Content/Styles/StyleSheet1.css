@@ -40,3 +40,7 @@ body {
     padding: 100px;
     border: 100px;
 }
+
+.container {
+    border-style: solid;
+}

@@ -1,8 +1,6 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Pricing";
 }
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +12,20 @@
 </head>
 <body>
     <div class="container">
-        <h2>Catalog</h2>
+        <h2>Place an Order</h2>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Compound Chemical Makeup</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: H20">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Client Comments</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </form>
+        <p>*Stared tests are optional, and will only be conducted per request of the client by selecting to be tested if needed.</p>
+        <br>
         <table class="table">
             <thead>
                 <tr>
@@ -22,128 +33,203 @@
                     <th>Days</th>
                     <th>Test</th>
                     <th>Price</th>
-
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Biochemical Pharmacology (BP)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>Biochemical Pharmacology (BP)</strong>
+                    </td>
                     <td>13-19</td>
                     <td>Test 1</td>
                     <td>$300</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 2</td>
                     <td>$450</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 3*</td>
                     <td>$100</td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            If necessary, perform this test immediately.
+                        </label>
+                    </td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><strong>DiscoveryScreen® (DS)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>DiscoveryScreen® (DS)</strong>
+                    </td>
                     <td>12-18</td>
                     <td>Test 1</td>
                     <td>$600</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 2*</td>
                     <td>$500</td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            When checked, Northwest will perform a necessary post tests when initial tests are unclear.
+                        </label>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 3*</td>
                     <td>$1000</td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            When checked, Northwest will perform a necessary post tests when initial tests are unclear.
+                        </label>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 4*</td>
                     <td>$700</td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            When checked, Northwest will perform a necessary post tests when initial tests are unclear.
+                        </label>
+                    </td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><strong>ImmunoScreen® (IS)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>ImmunoScreen® (IS)</strong>
+                    </td>
                     <td>8-12</td>
                     <td>Test 1</td>
                     <td>$60</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 2</td>
                     <td>$200</td>
-
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 3</td>
                     <td>$250</td>
+                    <td></td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><strong>ProfilingScreen® (PF)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>ProfilingScreen® (PF)</strong>
+                    </td>
                     <td>7-11</td>
                     <td>Test 1</td>
                     <td>$900</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 2</td>
                     <td>$500</td>
+                    <td></td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><strong>PharmaScreen® (PS)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>PharmaScreen® (PS)</strong>
+                    </td>
                     <td>6-8</td>
                     <td>Test 1</td>
                     <td>$600</td>
+                    <td></td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><strong>CustomScreen™ (CS)</strong></td>
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Add
+                        </label>
+                        <strong>CustomScreen™ (CS)</strong>
+                    </td>
                     <td>14-21</td>
                     <td>Test 1</td>
                     <td>$1150</td>
-                    
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 2</td>
                     <td>$300</td>
-
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Test 3*</td>
                     <td>$420</td>
-                    
+                    <td>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            When checked, Northwest will perform a necessary post tests when initial tests are unclear.
+                        </label>
+                    </td>
+
                 </tr>
             </tbody>
         </table>
+        <button type="button" class="btn btn-primary">Request Review of Order</button>
+        <br>
     </div>
+    <br>
+    <br>
+    <br>
     <p>Base price of $200 will be charged per assay.</p>
-
     <p>Each assay may consist of multiple tests. Cost of each test varies from one another because each test requires different chemicals, equipment, and procedure.</p>
-    <p>*These tests are optional, and will only be conducted per request of the client</p>
 </body>
-
-
 </html>
