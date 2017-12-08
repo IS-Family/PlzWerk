@@ -27,6 +27,11 @@ namespace PlzWerk.Controllers
             return View();
         }
 
+        public ActionResult ThankYou()
+        {
+            return View();
+        }
+
         public ActionResult Register()
         {
             return View();
@@ -61,7 +66,7 @@ namespace PlzWerk.Controllers
             String userName = form["User Name"].ToString();
             String password = form["Password"].ToString();
 
-            if (string.Equals(userName, "Client1") && (string.Equals(password, "ShowMe")))
+            if (string.Equals(userName, "Client") && (string.Equals(password, "ShowMe")))
             {
                 FormsAuthentication.SetAuthCookie(userName, rememberMe);
 
@@ -100,5 +105,7 @@ namespace PlzWerk.Controllers
             return RedirectToAction("Pricing", "Home", new { FName = FirstName, LName = LastName });
 
         }
+
+       
     }
 }

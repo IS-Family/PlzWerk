@@ -41,6 +41,8 @@ body {
     border: 100px;
 }
 
-.container {
+.container-login {
     border-style: solid;
+    border-width: 0.1px;
+    border-color: grey;
 }
